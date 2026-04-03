@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CV Online - Risma</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #f0f0f0;
+    overflow-x: hidden;
+}
+
+nav {
+    background: #8B2E00;
+    color: white;
+    padding: 10px 20px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.nav-menu li {
+    background: white;
+    color: black;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nav-menu li.active {
+    background: #007bff;
+    color: white;
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.burger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.card {
+    background: #b87a3c;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    color: black;
+}
+
+.card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.edu-list {
+    list-style-position: inside;
+    padding: 0;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+@media (max-width: 768px){
+
+    .burger {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background: #8B2E00;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 10px;
+        border-radius: 0;
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .card {
+        padding: 20px;
+    }
+}
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+
+<nav>
+    <div class="nav-container">
+        <h2>My CV SPA</h2>
+
+        <div class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="nav-menu">
+            <li class="menu active" data-page="home.html">Home</li>
+            <li class="menu" data-page="about.html">About</li>
+            <li class="menu" data-page="contact.html">Contact</li>
+            <li class="menu" data-page="github.html">Github</li>
+            <li class="menu" data-page="skills.html">Skills</li>
+            <li class="menu" data-page="education.html">Education</li>
+            <li class="menu" data-page="experience.html">Experience</li>
+            <li class="menu" data-page="portofolio.html">Portofolio</li>
+            <li class="menu" data-page="certificate.html">Certificate</li>
+        </ul>
+    </div>
+</nav>
+
+<div id="content"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
