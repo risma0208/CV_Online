@@ -1,4 +1,33 @@
 <div class="card">
     <h2>GitHub Info</h2>
-    <div id="githubData">Loading...</div>
+    
+    <div style="padding: 20px; text-align: center;">
+        <img src="https://github.com/risma0208.png" style="width: 100px; border-radius: 50%; border: 3px solid #3498db; margin-bottom: 15px;">
+        
+        <h3 style="margin: 5px 0;">risma0208</h3>
+        <p style="color: #666; font-size: 14px;">Mahasiswi Komputerisasi Akuntansi</p>
+        
+        <div style="margin: 20px 0;">
+            <a href="https://github.com/risma0208" target="_blank" style="
+                background-color: #24292e;
+                color: white !important;
+                padding: 12px 25px;
+                text-decoration: none;
+                border-radius: 5px;
+                font-weight: bold;
+                display: inline-block;
+            ">
+                🚀 Buka Profil GitHub
+            </a>
+        </div>
+    </div>
 </div>
+
+<script>
+    // Trik supaya script.js lama tidak menimpa tampilan ini dengan tulisan "Gagal"
+    var elem = document.getElementById("githubData");
+    if(elem) {
+        elem.id = "githubData_old"; 
+        elem.style.display = "none";
+    }
+</script>
