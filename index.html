@@ -6,20 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
+/* 1. Efek Smooth Scroll untuk seluruh halaman */
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     box-sizing: border-box;
-    transition: all 0.3s ease; /* Membuat semua perubahan warna/posisi jadi halus */
+    transition: all 0.3s ease; /* Transisi halus untuk semua elemen */
 }
 
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
-    background: #e9ecef; /* Abu-abu muda yang lebih bersih */
+    background: #e9ecef;
     overflow-x: hidden;
 }
 
 nav {
-    background: #2c3e50; /* Ganti ke Biru Navy agar lebih profesional */
+    background: #2c3e50;
     color: white;
     padding: 15px 20px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.2);
@@ -47,11 +52,14 @@ nav {
     border-radius: 5px;
     cursor: pointer;
     font-size: 14px;
+    transition: 0.4s; /* Biar hover lebih smooth */
 }
 
+/* 2. Efek Hover Menu yang interaktif */
 .nav-menu li:hover {
-    background: #3498db; /* Efek hover biru cerah */
-    transform: translateY(-2px);
+    background: #3498db;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .nav-menu li.active {
@@ -74,17 +82,23 @@ nav {
     border-radius: 2px;
 }
 
+/* 3. Animasi Muncul (Fade In) untuk konten */
+@keyframes fadeInContent {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 #content {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 85vh;
     padding: 20px;
+    animation: fadeInContent 0.8s ease-out; /* Jalankan animasi saat ganti menu */
 }
 
-/* Update tampilan Card agar lebih modern */
 .card {
-    background: white; /* Putih bersih */
+    background: white;
     padding: 40px;
     border-radius: 20px;
     text-align: center;
@@ -92,7 +106,7 @@ nav {
     max-width: 600px;
     color: #333;
     box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-    border-top: 8px solid #3498db; /* Aksen garis biru */
+    border-top: 8px solid #3498db;
 }
 
 .card img {
