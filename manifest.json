@@ -1,7 +1,7 @@
 {
   "name": "Risma Online CV",
   "short_name": "RismaCV",
-  "description": "CV Online Risma Nurdiani - SPA Project",
+  "description": "CV Online Risma Nurdiani - Full PWA Level 3",
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#2c3e50",
@@ -10,12 +10,14 @@
     {
       "src": "https://github.com/risma0208.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "https://github.com/risma0208.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }
