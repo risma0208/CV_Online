@@ -10,14 +10,14 @@
     <link rel="apple-touch-icon" href="https://github.com/risma0208.png">
 
     <style>
-/* 1. Efek Smooth Scroll untuk seluruh halaman */
+/* Smooth Scroll & Transitions */
 html {
     scroll-behavior: smooth;
 }
 
 * {
     box-sizing: border-box;
-    transition: all 0.3s ease; /* Transisi halus untuk semua elemen */
+    transition: all 0.3s ease;
 }
 
 body {
@@ -56,10 +56,9 @@ nav {
     border-radius: 5px;
     cursor: pointer;
     font-size: 14px;
-    transition: 0.4s; /* Biar hover lebih smooth */
+    transition: 0.4s;
 }
 
-/* 2. Efek Hover Menu yang interaktif */
 .nav-menu li:hover {
     background: #3498db;
     transform: translateY(-3px);
@@ -86,7 +85,7 @@ nav {
     border-radius: 2px;
 }
 
-/* 3. Animasi Muncul (Fade In) untuk konten */
+/* Animasi Fade In Content */
 @keyframes fadeInContent {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -98,7 +97,7 @@ nav {
     align-items: center;
     min-height: 85vh;
     padding: 20px;
-    animation: fadeInContent 0.8s ease-out; /* Jalankan animasi saat ganti menu */
+    animation: fadeInContent 0.8s ease-out;
 }
 
 .card {
@@ -122,12 +121,6 @@ nav {
     margin-bottom: 20px;
 }
 
-.edu-list {
-    list-style-position: inside;
-    padding: 0;
-    text-align: left;
-}
-
 input, textarea {
     width: 100%;
     padding: 12px;
@@ -137,10 +130,7 @@ input, textarea {
 }
 
 @media (max-width: 768px){
-    .burger {
-        display: flex;
-    }
-
+    .burger { display: flex; }
     .nav-menu {
         display: none;
         flex-direction: column;
@@ -150,36 +140,22 @@ input, textarea {
         right: 0;
         width: 100%;
         padding: 20px;
-        border-radius: 0;
         box-shadow: 0 10px 10px rgba(0,0,0,0.1);
     }
-
-    .nav-menu.show {
-        display: flex;
-    }
-
-    .card {
-        padding: 30px 20px;
-    }
+    .nav-menu.show { display: flex; }
 }
     </style>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
 </head>
-
 <body>
 
 <nav>
     <div class="nav-container">
         <h2 style="margin: 0; font-size: 20px;">Risma CV Project</h2>
-
         <div class="burger">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
         </div>
-
         <ul class="nav-menu">
             <li class="menu active" data-page="home.html">Home</li>
             <li class="menu" data-page="about.html">About</li>
@@ -202,12 +178,11 @@ input, textarea {
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
       navigator.serviceWorker.register('sw.js')
-        .then(reg => console.log('Service Worker: Registered (Scope: ' + reg.scope + ')'))
-        .catch(err => console.log('Service Worker: Error', err));
+        .then(reg => console.log('SW Registered'))
+        .catch(err => console.log('SW Failed', err));
     });
   }
 </script>
 
 </body>
 </html>
-
