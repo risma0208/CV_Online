@@ -4,6 +4,10 @@
     <title>CV Online - Risma</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2c3e50">
+    <link rel="apple-touch-icon" href="https://github.com/risma0208.png">
 
     <style>
 /* 1. Efek Smooth Scroll untuk seluruh halaman */
@@ -194,5 +198,16 @@ input, textarea {
 
 <script src="script.js"></script>
 
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js')
+        .then(reg => console.log('Service Worker: Registered (Scope: ' + reg.scope + ')'))
+        .catch(err => console.log('Service Worker: Error', err));
+    });
+  }
+</script>
+
 </body>
 </html>
+
